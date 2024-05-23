@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "ClesmonteDemo";
+  src: url(./Fonts/Clesmont.otf);
+}
+/* font weight changé par Daniela*/
+body {
+  background-image: url("./Images/bg.png");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+}
+.image {
+  background-image: url("./Images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.gradient {
+  background: linear-gradient(
+    96deg,
+    #8430a0 2.31%,
+    #246092 113.82%,
+    #1c6491 123.26%,
+    #136990 123.27%
+  );
+}
+.card-gradient {
+  background: linear-gradient(
+    137deg,
+    rgba(141, 52, 255, 0.15) 15.22%,
+    rgba(141, 52, 255, 0) 85%
+  );
+
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.portfolio-gradient{
+  border-radius: 20px;
+  background: linear-gradient(95deg, rgba(141, 52, 255, 0.15) 15.22%, rgba(141, 52, 255, 0.00) 99.12%);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  opacity: 0.9;
+}
+.secondary-gradient {
+  border: 1px solid;
+  border-radius: 8px !important;
+  border-image: linear-gradient(to bottom right, #bc72d5, #5d8dea);
+  border-image-slice: 1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+}
+@media screen and (min-width: 1500px) {
+  .icones {
+    gap: 7rem;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .enseignant {
+    width: 35rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .enseignant {
+    width: 28rem;
+  }
+}
+@media screen and (min-width: 989px) {
+  .menumobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 989px) {
+  .desktopmenu {
+    display: none;
+  }
+}
+
+
+/* ajouté par Daniela*/
+.custom-checkbox{
+    /* Rendre la couleur de fond transparente */
+    background-color: transparent;
+    /* Ajouter une bordure blanche d'un pixel */
+    border: 1px solid #ffffff;
+    /* Ajuster la taille de la checkbox */
+    width: 1.5rem;
+    height: 1.5rem;
+    /* Optionnel : retirer la boîte par défaut */
+    appearance: none;
+    /* Optionnel : utiliser une police de caractères pour le style du curseur */
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.custom-checkbox:checked {
+  /* Ajout du signe "v" avec une position absolue */
+  &::before {
+      content: '✔';
+      font-size: 1rem; /* Taille de la police du caractère */
+      color: #fff; /* Couleur du caractère */
+      display: flex;
+      justify-content: center; /* Pour centrer horizontalement */
+      align-items: center; /* Pour centrer verticalement */
+  }
+}
+
+/* Boutons */
+.CTA {
+  display: flex;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: linear-gradient(96deg, #8430A0 2.31%, #246092 113.82%, #1C6491 123.26%, #136990 123.27%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: var(--White, #FFF);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  text-align: center; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.CTA2{
+  display: flex;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #BC72D5;
+  box-shadow: 0px 0px 4px 0px #5DBDEA;
+  color: var(--White, #FFF);
+}
+
+.CTA3{
+  display: flex;
+padding: 13px 0px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+}
+/* Texte */
+
+p, a, li, ul, ol, label{
+  color: var(--Fond-clair, #F5F3F7);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; /* 24px */
+}
+h1{
+  color: #F8EFFA;
+  font-family: Clesmont;
+  font-size: 2.3em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 68px;
+}
+
+h2{
+  font-family: Clesmont;
+  color: #F8EFFA;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+h3{
+  font-family: Clesmont;
+  color: #F8EFFA;
+  font-size: 1.9em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+h4{color: var(--Violet-Violet-50, #F8EFFA);
+  font-family: Clesmont;
+  font-size: 1.8em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 41px;}
+h5{
+  color: var(--Fond-clair, #F5F3F7);
+  font-family: Clesmont;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+h6{
+  color: #FAFAFA;
+  text-align: center;
+  text-shadow: 0px 0px 20px #000;
+  font-family: Clesmont;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px
+}
+
+.bg{
+  background-image: url("../assets/Images/bg.png");
+  background-position: start;
+  background-repeat: no-repeat;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+}
+ .gradient {
+  background: linear-gradient(
+    96deg,
+    #8430a0 2.31%,
+    #246092 113.82%,
+    #1c6491 123.26%,
+    #136990 123.27%
+  );}
+
+/* Style pour les listes non ordonnées */
+.article ul {
+  list-style-type: disc; /* Type de puce */
+}
+
+/* Style pour les listes ordonnées */
+.article ol {
+  list-style-type: decimal; /* Type de numérotation */
+}
+
+/* Style pour les éléments de liste */
+.article li {
+  margin-bottom: 5px; /* Marge en bas pour espacement entre les éléments de la liste */
+}
+.article img, iframe {
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-left: auto; /* Centre l'image horizontalement */
+  margin-right: auto; /* Centre l'image horizontalement */
+  display: block; /* Centre l'image horizontalement */
+}
+
+/* Style pour les cards */
+.cardstyle {
+  width: 25rem;
+  height: 32rem;
+}
+@media screen and (max-width: 900px){
+.cardstyle {
+  width: 20rem;
+}
+@media screen and (max-width: 500px){
+  .cardstyle {
+    width: 22rem;
+  }
+}
+}
+@media screen and (max-width: 400px){
+  .cardstyle {
+    width: 20rem;
+  }
+  }
+@media screen and (max-width: 320px){
+.cardstyle {
+  width: 17rem;
+}
+}
+
+/* Style pour les categies du menu */
+
+.menucat:hover{
+  gap: 8px;
+  border-radius: 4px;
+  background: linear-gradient(96deg, #8430A0 2.31%, #246092 113.82%, #1C6491 123.26%, #136990 123.27%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
